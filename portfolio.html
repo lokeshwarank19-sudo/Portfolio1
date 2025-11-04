@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lokeshwaran K | Java Developer</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --accent: #4f46e5;
+      --border: #e5e7eb;
+      --gray: #6b7280;
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 10%;
+      border-bottom: 1px solid var(--border);
+      background: #f9fafb;
+    }
+    header h1 { font-size: 1.5rem; margin: 0; }
+    header p { color: var(--gray); margin: 0.25rem 0 0 0; font-size: 0.9rem; }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--accent); }
+
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; display: grid; gap: 2rem; grid-template-columns: 2fr 1fr; }
+    section, aside { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+
+    .hero {
+      display: flex; gap: 1.5rem; align-items: flex-start;
+    }
+    .avatar {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: bold;
+    }
+    .skills span {
+      display: inline-block;
+      margin: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      margin-right: 0.5rem;
+    }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.outline { border: 1px solid var(--border); color: var(--text); }
+
+    .project {
+      margin-bottom: 1.5rem;
+    }
+    .project h4 { margin-bottom: 0.25rem; }
+    .project p { margin-top: 0.5rem; }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding: 1rem;
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      main { grid-template-columns: 1fr; }
+      .hero { flex-direction: column; align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Lokeshwaran K</h1>
+      <p>Java Developer</p>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="avatar">L</div>
+      <div>
+        <h2>Hi — I'm Lokeshwaran K.</h2>
+        <p>Highly-motivated employee with desire to take on new challenges. Strong work ethic, adaptability, and exceptional interpersonal skills. Adept at working effectively unsupervised and quickly mastering new skills.</p>
+
+        <h3>Primary Skills</h3>
+        <div class="skills">
+          <span>Java</span>
+          <span>SQL</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn outline">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <aside id="contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:lokeshwaran.k.19@gmail.com">lokeshwaran.k.19@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919360286662">+91 93602 86662</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/lokeshwaran-k--snsinstitutions" target="_blank">linkedin.com/in/lokeshwaran-k--snsinstitutions</a></p>
+    </aside>
+
+    <section id="projects" style="grid-column: 1 / -1;">
+      <h3>Projects</h3>
+
+      <div class="project">
+        <h4>Decentralized Crowd Funding Application</h4>
+        <p><strong>SNS College of Engineering</strong> • Mar 10, 2025 — May 02, 2025</p>
+        <p>Developed a decentralized crowdfunding platform utilizing Ethereum smart contracts, enabling secure, transparent fundraising without third-party involvement. Designed features for campaign creation, user wallet integration, and donation processing, ensuring full transaction visibility and blockchain-based immutability.</p>
+      </div>
+
+      <div class="project">
+        <h4>Blockchain Voting System</h4>
+        <p><strong>SNS College of Engineering</strong> • Jul 08, 2024 — Sep 13, 2024</p>
+        <p>Designed and implemented a blockchain-powered voting platform to promote secure, tamper-resistant elections. Facilitated remote voting with strong network availability, building voter confidence through transparent record-keeping and user-friendly interfaces accessible to all eligible participants.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Lokeshwaran — Java Developer
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
